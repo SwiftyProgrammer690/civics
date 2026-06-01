@@ -6,84 +6,28 @@
 <title>War Rewritten</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:wght@300;400&display=swap');
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background: #f5ede0;
-    color: #3b2a1a;
-    font-family: 'Source Serif 4', serif;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 60px 24px;
-  }
-
+  body { background: #f5ede0; color: #3b2a1a; font-family: 'Source Serif 4', serif; max-width: 720px; margin: 0 auto; padding: 60px 24px; }
   header { border-bottom: 2px solid #c4a882; padding-bottom: 24px; margin-bottom: 48px; }
-
-  .site-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 13px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: #9a7a56;
-    margin-bottom: 20px;
-  }
-
-  h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    line-height: 1.2;
-    font-weight: 700;
-    margin-bottom: 12px;
-  }
-
-  .subtitle {
-    font-size: 16px;
-    color: #7a5c3a;
-    font-weight: 300;
-    font-style: italic;
-  }
-
-  .meta {
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #9a7a56;
-    margin: 32px 0 16px;
-  }
-
-  h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    margin: 48px 0 14px;
-    border-left: 3px solid #c4a882;
-    padding-left: 14px;
-  }
-
+  .site-name { font-family: 'Playfair Display', serif; font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: #9a7a56; margin-bottom: 20px; }
+  h1 { font-family: 'Playfair Display', serif; font-size: 42px; line-height: 1.2; font-weight: 700; margin-bottom: 12px; }
+  .subtitle { font-size: 16px; color: #7a5c3a; font-weight: 300; font-style: italic; }
+  .meta { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #9a7a56; margin: 32px 0 16px; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 24px; margin: 48px 0 14px; border-left: 3px solid #c4a882; padding-left: 14px; }
   p { font-size: 17px; line-height: 1.8; margin-bottom: 16px; color: #3b2a1a; }
-
-  .pullquote {
-    border-top: 1px solid #c4a882;
-    border-bottom: 1px solid #c4a882;
-    padding: 20px 0;
-    margin: 40px 0;
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-style: italic;
-    color: #7a5c3a;
-    text-align: center;
-  }
-
-  footer {
-    margin-top: 64px;
-    padding-top: 20px;
-    border-top: 1px solid #c4a882;
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #9a7a56;
-    text-align: center;
-  }
+  .pullquote { border-top: 1px solid #c4a882; border-bottom: 1px solid #c4a882; padding: 20px 0; margin: 40px 0; font-family: 'Playfair Display', serif; font-size: 20px; font-style: italic; color: #7a5c3a; text-align: center; }
+  .weapon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0 40px; }
+  details { background: #ecddc8; border: 1px solid #c4a882; border-radius: 4px; overflow: hidden; }
+  summary { padding: 14px 16px; font-family: 'Playfair Display', serif; font-size: 15px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary::after { content: '+'; font-size: 18px; color: #9a7a56; }
+  details[open] summary::after { content: '-'; }
+  .weapon-body { padding: 0 16px 16px; }
+  .img-placeholder { width: 100%; height: 130px; background: #d9c5a8; border-radius: 3px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #9a7a56; }
+  .weapon-body p { font-size: 14px; line-height: 1.7; margin: 0; }
+  .civilian-box { background: #ecddc8; border-left: 4px solid #9a7a56; padding: 24px; margin: 24px 0; border-radius: 0 4px 4px 0; }
+  .civilian-box p { margin-bottom: 10px; font-size: 16px; }
+  .civilian-box p:last-child { margin-bottom: 0; }
+  footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid #c4a882; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #9a7a56; text-align: center; }
 </style>
 </head>
 <body>
@@ -94,26 +38,88 @@
   <p class="subtitle">New weapons, new strategies, and a whole lot of casualties</p>
 </header>
 
-<div class="meta">By Swarit Choudhari & Akshaj Bodla &nbsp;·&nbsp; Civics Capstone 2026</div>
+<div class="meta">By Swarit Choudhari &amp; Akshaj Bodla</div>
 
-<p>Most people think of World War I as just another old war with old weapons. But that's completely wrong. WWI was the first time in history that modern technology was used on a massive scale to fight a war — and it changed everything.</p>
+<p>Most people think of World War I as just another old war with old weapons. But that is completely wrong. WWI was the first time in history that modern technology was used on a massive scale to fight a war, and it changed everything. From poison gas to tanks to machine guns, the weapons developed between 1914 and 1918 did not just end that war. They shaped every conflict that came after it.</p>
 
-<h2>Machine Guns & The Trenches</h2>
-<p>Before WWI, armies still charged across open fields. Then the machine gun showed up and made all of that basically suicidal. One gun could fire 400–600 rounds per minute. Armies had no choice but to dig down into the earth to survive — that's how you get 400 miles of trenches across Europe.</p>
+<h2>Machine Guns and the Trenches</h2>
+<p>Before WWI, armies still charged across open fields. Cavalry on horseback, soldiers rushing with bayonets, stuff that had worked for centuries. Then the machine gun showed up and made all of that basically suicidal. One gun could fire 400 to 600 rounds per minute. Armies had no choice but to dig down into the earth to survive. That is how you get 400 miles of trenches stretching across Europe. Soldiers lived underground for months at a time, surrounded by mud, rats, and disease. The constant shelling caused a condition called shell shock, which we now know as PTSD.</p>
+
+<h2>Weapons of WWI</h2>
+<p>WWI introduced a lot of new weapons that completely changed how wars were fought. Click on each one to learn more.</p>
+
+<div class="weapon-grid">
+
+  <details>
+    <summary>Rifles</summary>
+    <div class="weapon-body">
+      <div class="img-placeholder">Image Here</div>
+      <p>Every infantry soldier carried a bolt-action rifle. The British Lee-Enfield and German Gewehr 98 were the most common ones. Trained soldiers could fire around 15 rounds per minute, which sounds like a lot until you compare it to a machine gun.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Machine Guns</summary>
+    <div class="weapon-body">
+      <div class="img-placeholder">Image Here</div>
+      <p>The German MG 08 and British Vickers gun could fire 400 to 600 rounds per minute. They basically ended cavalry charges and open field attacks forever. One machine gun nest could stop an entire infantry advance on its own.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Flamethrowers</summary>
+    <div class="weapon-body">
+      <div class="img-placeholder">Image Here</div>
+      <p>Germany introduced the Flammenwerfer in 1915. It shot burning fuel up to 40 meters and was designed to clear trenches instantly. It was as much a psychological weapon as a physical one. Soldiers panicked just hearing one nearby.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Poison Gas</summary>
+    <div class="weapon-body">
+      <div class="img-placeholder">Image Here</div>
+      <p>Germany first used chlorine gas at Ypres in 1915. Then came phosgene, which was odorless and even deadlier. Mustard gas arrived in 1917 and caused weeks of suffering through blisters and temporary blindness. The gas mask was invented because of these weapons.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Tanks</summary>
+    <div class="weapon-body">
+      <div class="img-placeholder">Image Here</div>
+      <p>Britain introduced tanks at the Battle of the Somme in 1916. Early ones moved at 4 mph and broke down constantly, but by 1918 massed tank attacks helped finally break the stalemate. Every military in the world started building their own right after.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Grenades and Mortars</summary>
+    <div class="weapon-body">
+      <div class="img-placeholder">Image Here</div>
+      <p>Trench warfare created a need for weapons that could be thrown or lobbed over walls of dirt. The German stick grenade and British Mills bomb became standard. Mortars could arc shells into trenches from a safe distance, which was perfect for the static warfare of the Western Front.</p>
+    </div>
+  </details>
+
+</div>
+
+<div class="pullquote">"New technology in war does not just make armies stronger. It makes war more dangerous for everyone."</div>
 
 <h2>Chemical Warfare</h2>
-<p>On April 22, 1915, Germany released chlorine gas at Ypres. Soldiers had zero protection. Then came phosgene, then mustard gas — which didn't kill quickly, it just made you suffer for weeks. These weapons drifted beyond the battlefield into civilian towns. WWI was the first war where danger followed soldiers home.</p>
+<p>On April 22, 1915, Germany opened 5,700 canisters of chlorine gas near Ypres, Belgium. A yellow-green cloud drifted toward Allied trenches and soldiers had literally zero protection. Some held wet rags over their mouths. This was the first large-scale chemical weapons attack in history. Then came mustard gas in 1917, which did not kill you fast. It blistered your skin, temporarily blinded you, and destroyed your lungs over the course of weeks. The gas mask exists because of WWI.</p>
 
-<div class="pullquote">"New technology in war doesn't just make armies stronger — it makes war more dangerous for everyone."</div>
-
-<h2>Tanks, Aircraft & U-Boats</h2>
-<p>Britain introduced the tank at the Somme in 1916. Early ones broke down constantly and moved at 4 mph, but by 1918 massed tank attacks helped end the stalemate. Aircraft went from reconnaissance to dogfights and city bombing raids in under four years. German U-Boats sank civilian ships like the Lusitania, killing nearly 1,200 people and pulling the US closer to entering the war.</p>
+<h2>Tanks, Aircraft, and U-Boats</h2>
+<p>Aircraft went from barely existing to full-on dogfights and bombing raids in under four years. Pilots started out throwing grenades from cockpits by hand. By 1916 they had machine guns mounted on the planes. German U-Boats were basically early submarines that targeted supply ships coming into Britain. They also sank the Lusitania, a passenger ship, killing nearly 1,200 civilians. That is part of what eventually pushed the US to enter the war.</p>
 
 <h2>The Civilian Cost</h2>
-<p>Artillery leveled entire towns across France and Belgium. The British naval blockade of Germany contributed to an estimated 500,000+ civilian deaths from starvation and disease. WWI proved that modern warfare doesn't stay on the battlefield — technology made it impossible to keep civilians out of it.</p>
+<p>This is probably the most overlooked part of WWI. Most people focus on the soldiers, but civilians paid an enormous price too.</p>
+
+<div class="civilian-box">
+  <p>Artillery completely destroyed towns across France and Belgium. Millions of people were displaced from their homes with nowhere to go.</p>
+  <p>German U-Boats blockaded Britain to cut off food supplies, and Britain did the same to Germany. Historians estimate the British blockade caused over 500,000 civilian deaths from starvation and disease alone.</p>
+  <p>Chemical weapons did not stay on the battlefield. Gas drifted into nearby towns. Civilians were evacuated, exposed, and sometimes killed. WWI was the first war where the front line bled into everyday life.</p>
+  <p>Returning soldiers also brought home psychological trauma that affected entire families for generations. Shell shock was not well understood at the time, so many soldiers suffered in silence with no real treatment.</p>
+</div>
 
 <h2>The Legacy</h2>
-<p>Every major weapon system used in conflicts today traces back to WWI. The war rewrote the rules — and every military since has been building on what was learned between 1914 and 1918.</p>
+<p>WWI did not just end one conflict. It rewrote the rules for every conflict that came after it. Machine guns forced armies underground. Chemical weapons led to international bans that still exist today. Tanks changed land warfare forever. And the scale of civilian casualties forced governments to think differently about what war actually costs. Every major weapon used in modern conflicts traces back to what was developed between 1914 and 1918. The lesson is pretty simple. When technology gets more powerful, war gets more dangerous for everyone, not just the soldiers fighting it.</p>
 
 <footer>War Rewritten &nbsp;·&nbsp; @warrewritten &nbsp;·&nbsp; Downingtown STEM Academy</footer>
 
