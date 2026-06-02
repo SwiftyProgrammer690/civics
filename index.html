@@ -16,13 +16,15 @@
   h2 { font-family: 'Playfair Display', serif; font-size: 24px; margin: 48px 0 14px; border-left: 3px solid #c4a882; padding-left: 14px; }
   p { font-size: 17px; line-height: 1.8; margin-bottom: 16px; color: #3b2a1a; }
   .pullquote { border-top: 1px solid #c4a882; border-bottom: 1px solid #c4a882; padding: 20px 0; margin: 40px 0; font-family: 'Playfair Display', serif; font-size: 20px; font-style: italic; color: #7a5c3a; text-align: center; }
-  .weapon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0 40px; }
-  details { background: #ecddc8; border: 1px solid #c4a882; border-radius: 4px; overflow: hidden; }
+  .weapon-grid { display: flex; flex-direction: column; gap: 12px; margin: 24px 0 40px; }
+  details { background: #ecddc8; border: 1px solid #c4a882; border-radius: 4px; }
   summary { padding: 14px 16px; font-family: 'Playfair Display', serif; font-size: 15px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary::-webkit-details-marker { display: none; }
   summary::after { content: '+'; font-size: 18px; color: #9a7a56; }
   details[open] summary::after { content: '-'; }
-  .weapon-body { padding: 0 16px 16px; }
-  .img-placeholder { width: 100%; height: 130px; background: #d9c5a8; border-radius: 3px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #9a7a56; }
+  .weapon-body { display: none; padding: 0 16px 16px; }
+  details[open] .weapon-body { display: block; }
+  .weapon-img { width: 100%; height: 180px; object-fit: cover; border-radius: 3px; margin-bottom: 10px; display: block; }
   .weapon-body p { font-size: 14px; line-height: 1.7; margin: 0; }
   .civilian-box { background: #ecddc8; border-left: 4px solid #9a7a56; padding: 24px; margin: 24px 0; border-radius: 0 4px 4px 0; }
   .civilian-box p { margin-bottom: 10px; font-size: 16px; }
@@ -38,7 +40,7 @@
   <p class="subtitle">New weapons, new strategies, and a whole lot of casualties</p>
 </header>
 
-<div class="meta">By Swarit Choudhari &amp; Akshaj Bodla</div>
+<div class="meta">By Swarit Choudhari &amp; Akshaj Bodla &nbsp;·&nbsp; Civics Capstone 2026</div>
 
 <p>Most people think of World War I as just another old war with old weapons. But that is completely wrong. WWI was the first time in history that modern technology was used on a massive scale to fight a war, and it changed everything. From poison gas to tanks to machine guns, the weapons developed between 1914 and 1918 did not just end that war. They shaped every conflict that came after it.</p>
 
@@ -53,7 +55,7 @@
   <details>
     <summary>Rifles</summary>
     <div class="weapon-body">
-      <div class="img-placeholder">Image Here</div>
+      <img class="weapon-img" src="https://www.warhistoryonline.com/wp-content/uploads/sites/64/2017/11/7e5wa6mo.jpg" alt="Rifles">
       <p>Every infantry soldier carried a bolt-action rifle. The British Lee-Enfield and German Gewehr 98 were the most common ones. Trained soldiers could fire around 15 rounds per minute, which sounds like a lot until you compare it to a machine gun.</p>
     </div>
   </details>
@@ -61,7 +63,7 @@
   <details>
     <summary>Machine Guns</summary>
     <div class="weapon-body">
-      <div class="img-placeholder">Image Here</div>
+      <img class="weapon-img" src="https://warfarehistorynetwork.com/wp-content/uploads/The-Machine-Gun-at-the-Battle-of-the-Somme.jpg" alt="Machine Guns">
       <p>The German MG 08 and British Vickers gun could fire 400 to 600 rounds per minute. They basically ended cavalry charges and open field attacks forever. One machine gun nest could stop an entire infantry advance on its own.</p>
     </div>
   </details>
@@ -69,7 +71,7 @@
   <details>
     <summary>Flamethrowers</summary>
     <div class="weapon-body">
-      <div class="img-placeholder">Image Here</div>
+      <img class="weapon-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT97gv0ETDBwIwri3wNJvpovSxl3emybB7k_g&s" alt="Flamethrowers">
       <p>Germany introduced the Flammenwerfer in 1915. It shot burning fuel up to 40 meters and was designed to clear trenches instantly. It was as much a psychological weapon as a physical one. Soldiers panicked just hearing one nearby.</p>
     </div>
   </details>
@@ -77,7 +79,7 @@
   <details>
     <summary>Poison Gas</summary>
     <div class="weapon-body">
-      <div class="img-placeholder">Image Here</div>
+      <img class="weapon-img" src="https://docs.rferl.org/Infographics//2018/2018_04/2018_04_Chem/images/assets/germany_first_use-4b7776bcf1.jpg" alt="Poison Gas">
       <p>Germany first used chlorine gas at Ypres in 1915. Then came phosgene, which was odorless and even deadlier. Mustard gas arrived in 1917 and caused weeks of suffering through blisters and temporary blindness. The gas mask was invented because of these weapons.</p>
     </div>
   </details>
@@ -85,7 +87,7 @@
   <details>
     <summary>Tanks</summary>
     <div class="weapon-body">
-      <div class="img-placeholder">Image Here</div>
+      <img class="weapon-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRVkbd03IQ18hpT822t2SE5OmCkD9to-Fn5A&s" alt="Tanks">
       <p>Britain introduced tanks at the Battle of the Somme in 1916. Early ones moved at 4 mph and broke down constantly, but by 1918 massed tank attacks helped finally break the stalemate. Every military in the world started building their own right after.</p>
     </div>
   </details>
@@ -93,7 +95,7 @@
   <details>
     <summary>Grenades and Mortars</summary>
     <div class="weapon-body">
-      <div class="img-placeholder">Image Here</div>
+      <img class="weapon-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsBMUS0LCOuBnOqkcY1L-snNTMUsk9RI6jXA&s" alt="Grenades and Mortars">
       <p>Trench warfare created a need for weapons that could be thrown or lobbed over walls of dirt. The German stick grenade and British Mills bomb became standard. Mortars could arc shells into trenches from a safe distance, which was perfect for the static warfare of the Western Front.</p>
     </div>
   </details>
